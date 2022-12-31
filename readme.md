@@ -1,3 +1,6 @@
+### Data Model
+![data model](assets/data_model_employeer.png "data model")
+
 ### Architecture
 The Onion Architecture as an instance of Clean Architecture with Dependency Inversion is used to make the architecture 
 of the project as clean as possible by serparating the domain, application (which is called 'service' in this project) 
