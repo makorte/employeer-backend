@@ -1,5 +1,7 @@
-### Data Model
-![data model](assets/data_model_employeer.png "data model")
+### Domain Model
+![data model](assets/domain_model_employeer.png "data model")
+Every employee ist part of a Unit (unit) which is managed by another employee (manager) and has employees. Some Employees
+are managers and therefore have a unit which they manage (managedUnit).
 
 ### Architecture
 The Onion Architecture as an instance of Clean Architecture with Dependency Inversion is used to make the architecture 
