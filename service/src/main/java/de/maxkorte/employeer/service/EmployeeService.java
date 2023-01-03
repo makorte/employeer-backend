@@ -1,0 +1,32 @@
+package de.maxkorte.employeer.service;
+
+import de.maxkorte.employeer.Employee;
+import de.maxkorte.employeer.repository.EmployeeRepository;
+import lombok.RequiredArgsConstructor;
+
+import java.util.UUID;
+
+@RequiredArgsConstructor
+public class EmployeeService {
+    private final EmployeeRepository employeeRepository;
+
+    public Employee createEmployee(Employee employee) {
+        return employeeRepository.createEmployee(employee);
+    }
+
+    public Employee getEmployee(UUID id) {
+        return employeeRepository.getEmployeeById(id);
+    }
+
+    public Employee getManager(UUID employeeId) {
+        return employeeRepository.getManagerByEmployeeId(employeeId);
+    }
+
+    public Employee updateEmployee(Employee employee) {
+        return employeeRepository.updateEmployee(employee);
+    }
+
+    public void removeEmployee(UUID id) {
+        employeeRepository.removeEmployee(id);
+    }
+}
