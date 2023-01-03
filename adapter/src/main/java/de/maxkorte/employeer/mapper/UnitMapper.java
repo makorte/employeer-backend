@@ -2,11 +2,12 @@ package de.maxkorte.employeer.mapper;
 
 import de.maxkorte.employeer.Unit;
 import de.maxkorte.employeer.dto.UnitDTO;
+import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
 import java.util.Set;
 
-@Mapper
+@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR, uses = EmployeeMapper.class)
 public interface UnitMapper {
     UnitDTO toDTO(Unit unit);
     Set<UnitDTO> toDTOSet(Set<Unit> units);
