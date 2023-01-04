@@ -3,10 +3,12 @@ package de.maxkorte.employeer.service;
 import de.maxkorte.employeer.Unit;
 import de.maxkorte.employeer.repository.UnitRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @RequiredArgsConstructor
+@Service
 public class UnitService {
     private final UnitRepository unitRepository;
 
