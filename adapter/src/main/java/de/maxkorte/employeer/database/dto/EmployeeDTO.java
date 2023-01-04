@@ -1,4 +1,4 @@
-package de.maxkorte.employeer.dto;
+package de.maxkorte.employeer.database.dto;
 
 import jakarta.persistence.*;
 import lombok.Data;
