@@ -1,7 +1,7 @@
 package de.maxkorte.employeer.database.mapper;
 
 import de.maxkorte.employeer.Unit;
-import de.maxkorte.employeer.database.dto.UnitDTO;
+import de.maxkorte.employeer.database.datatransfer.UnitDTO;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
