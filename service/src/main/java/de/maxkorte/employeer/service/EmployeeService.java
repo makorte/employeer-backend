@@ -20,10 +20,6 @@ public class EmployeeService {
         return employeeRepository.getEmployeeById(id);
     }
 
-    public Employee getManager(UUID employeeId) {
-        return employeeRepository.getManagerByEmployeeId(employeeId);
-    }
-
     public Employee updateEmployee(Employee employee) {
         return employeeRepository.updateEmployee(employee);
     }
