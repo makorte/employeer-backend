@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 
 import java.util.Set;
 
-@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR, uses = EmployeeMapper.class)
+@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface UnitMapper {
     UnitDTO toDTO(Unit unit);
     Set<UnitDTO> toDTOSet(Set<Unit> units);
