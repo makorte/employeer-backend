@@ -19,6 +19,9 @@ public class EmployeeService {
     public Employee getEmployee(UUID id) {
         return employeeRepository.getEmployeeById(id);
     }
+    public Employee getManagerByEmployeeId(UUID employeeId) {
+        return employeeRepository.getEmployeeById(employeeId).getUnit().getManager();
+    }
 
     public Employee updateEmployee(Employee employee) {
         return employeeRepository.updateEmployee(employee);
