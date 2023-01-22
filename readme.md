@@ -13,6 +13,11 @@ The Onion Architecture as an instance of Clean Architecture with Dependency Inve
 of the project as clean as possible by serparating the domain, application (which is called 'service' in this project) 
 and adapter layers.
 
+* Repositories are defined in the service package and implemented in the database package
+* Repository implementations use dataaccess objects (defined in the database package) to perform low level database operations
+* Services use the repositories to perform high level database actions are defined in the service package
+* Controllers are defined in the web package and use the services to perform the high level operations of the application
+
 ### Why Gradle Sub-Projects?
 Gradle sub-projects are used to make shure that every developer working on this project cannot cross the boundaries of
 the Onion Architecture and f. Ex. depend on the adapter layer from the application (aka service) layer.
