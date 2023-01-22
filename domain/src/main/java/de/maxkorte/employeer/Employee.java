@@ -17,6 +17,4 @@ public class Employee {
     private String mail;
     private String phone;
     private int weeklyWorkingHours;
-    private Unit unit;
-    private Unit managedUnit;
 }

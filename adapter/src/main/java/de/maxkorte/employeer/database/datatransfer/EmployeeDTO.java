@@ -17,9 +17,4 @@ public class EmployeeDTO {
     private String mail;
     private String phone;
     private int weeklyWorkingHours;
-    @ManyToOne
-    @JoinColumn(name = "unit_id")
-    private UnitDTO unit;
-    @OneToOne(mappedBy = "manager")
-    private UnitDTO managedUnit;
 }
