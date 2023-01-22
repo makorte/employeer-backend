@@ -12,19 +12,19 @@ import java.util.UUID;
 public class EmployeeService {
     private final EmployeeRepository employeeRepository;
 
-    public Employee createEmployee(Employee employee) {
-        return employeeRepository.createEmployee(employee);
+    public Employee save(Employee employee) {
+        return employeeRepository.save(employee);
     }
 
-    public Employee getEmployee(UUID id) {
-        return employeeRepository.getEmployeeById(id);
+    public Employee getById(UUID id) {
+        return employeeRepository.findById(id);
     }
 
-    public Employee updateEmployee(Employee employee) {
-        return employeeRepository.updateEmployee(employee);
+    public Employee update(Employee employee) {
+        return employeeRepository.update(employee);
     }
 
-    public void removeEmployee(UUID id) {
-        employeeRepository.removeEmployee(id);
+    public void delete(UUID id) {
+        employeeRepository.delete(id);
     }
 }

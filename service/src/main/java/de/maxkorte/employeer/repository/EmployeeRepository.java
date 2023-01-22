@@ -5,8 +5,8 @@ import de.maxkorte.employeer.Employee;
 import java.util.UUID;
 
 public interface EmployeeRepository {
-    Employee createEmployee(Employee employee);
-    Employee getEmployeeById(UUID id);
-    Employee updateEmployee(Employee employee);
-    void removeEmployee(UUID id);
+    Employee save(Employee employee);
+    Employee findById(UUID id);
+    Employee update(Employee employee);
+    void delete(UUID id);
 }

@@ -16,22 +16,22 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     private final EmployeeMapper employeeMapper;
 
     @Override
-    public Employee createEmployee(Employee employee) {
+    public Employee save(Employee employee) {
         return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toDTO(employee)));
     }
 
     @Override
-    public Employee getEmployeeById(UUID id) {
+    public Employee findById(UUID id) {
         return employeeMapper.toDomain(employeeDAO.findById(id).orElse(null));
     }
 
     @Override
-    public Employee updateEmployee(Employee employee) {
+    public Employee update(Employee employee) {
         return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toDTO(employee)));
     }
 
     @Override
-    public void removeEmployee(UUID id) {
+    public void delete(UUID id) {
         employeeDAO.deleteById(id);
     }
 }
