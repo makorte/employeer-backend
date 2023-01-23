@@ -7,6 +7,7 @@ import de.maxkorte.employeer.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.UUID;
 
 @Component
@@ -18,6 +19,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @Override
     public Employee save(Employee employee) {
         return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toDTO(employee)));
+    }
+
+    @Override
+    public List<Employee> findAll() {
+        return employeeMapper.toDomainList(employeeDAO.findAll());
     }
 
     @Override

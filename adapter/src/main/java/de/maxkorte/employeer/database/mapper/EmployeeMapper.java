@@ -5,12 +5,12 @@ import de.maxkorte.employeer.database.datatransfer.EmployeeDTO;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
-import java.util.Set;
+import java.util.List;
 
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface EmployeeMapper {
     EmployeeDTO toDTO(Employee employee);
-    Set<EmployeeDTO> toDTOSet(Set<Employee> employees);
+    List<EmployeeDTO> toDTOList(List<Employee> employees);
     Employee toDomain (EmployeeDTO employeeDTO);
-    Set<Employee> toDomainSet (Set<EmployeeDTO> employeeDTOs);
+    List<Employee> toDomainList (List<EmployeeDTO> employeeDTOs);
 }
