@@ -3,8 +3,6 @@ package de.maxkorte.employeer.web.controller;
 import de.maxkorte.employeer.Employee;
 import de.maxkorte.employeer.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,28 +15,27 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @PostMapping
-    public ResponseEntity<Employee> save(@RequestBody Employee employee) {
-        return new ResponseEntity<>(employeeService.save(employee), HttpStatus.OK);
+    public Employee save(@RequestBody Employee employee) {
+        return employeeService.save(employee);
     }
 
     @GetMapping
-    public ResponseEntity<List<Employee>> getAll() {
-        return new ResponseEntity<>(employeeService.getAll(), HttpStatus.OK);
+    public List<Employee> getAll() {
+        return employeeService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Employee> getById(@PathVariable UUID id) {
-        return new ResponseEntity<>(employeeService.getById(id), HttpStatus.OK);
+    public Employee getById(@PathVariable UUID id) {
+        return employeeService.getById(id);
     }
 
     @PutMapping
-    public ResponseEntity<Employee> update(@RequestBody Employee employee) {
-        return new ResponseEntity<>(employeeService.update(employee), HttpStatus.OK);
+    public Employee update(@RequestBody Employee employee) {
+        return employeeService.update(employee);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable UUID id) {
+    public void delete(@PathVariable UUID id) {
         employeeService.delete(id);
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
