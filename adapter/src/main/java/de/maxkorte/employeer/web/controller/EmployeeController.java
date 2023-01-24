@@ -3,7 +3,6 @@ package de.maxkorte.employeer.web.controller;
 import de.maxkorte.employeer.Employee;
 import de.maxkorte.employeer.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,11 +38,7 @@ public class EmployeeController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable UUID id) {
-        try {
-            employeeService.delete(id);
-        } catch (EmptyResultDataAccessException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        employeeService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
