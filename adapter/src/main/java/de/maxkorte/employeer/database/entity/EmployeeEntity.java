@@ -1,4 +1,4 @@
-package de.maxkorte.employeer.database.datatransfer;
+package de.maxkorte.employeer.database.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Entity(name = "employee")
 @Data
-public class EmployeeDTO {
+public class EmployeeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

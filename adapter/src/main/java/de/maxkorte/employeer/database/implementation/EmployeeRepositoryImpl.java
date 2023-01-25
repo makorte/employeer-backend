@@ -18,7 +18,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public Employee save(Employee employee) {
-        return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toDTO(employee)));
+        return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toEntity(employee)));
     }
 
     @Override
@@ -33,7 +33,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public Employee update(Employee employee) {
-        return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toDTO(employee)));
+        return employeeMapper.toDomain(employeeDAO.save(employeeMapper.toEntity(employee)));
     }
 
     @Override

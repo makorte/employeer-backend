@@ -1,16 +1,16 @@
 package de.maxkorte.employeer.database.mapper;
 
 import de.maxkorte.employeer.Employee;
-import de.maxkorte.employeer.database.datatransfer.EmployeeDTO;
+import de.maxkorte.employeer.database.entity.EmployeeEntity;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR, implementationName = "DatabaseCompanyMapperImpl")
 public interface EmployeeMapper {
-    EmployeeDTO toDTO(Employee employee);
-    List<EmployeeDTO> toDTOList(List<Employee> employees);
-    Employee toDomain (EmployeeDTO employeeDTO);
-    List<Employee> toDomainList (List<EmployeeDTO> employeeDTOs);
+    EmployeeEntity toEntity(Employee employee);
+    List<EmployeeEntity> toEntityList(List<Employee> employees);
+    Employee toDomain (EmployeeEntity employeeEntity);
+    List<Employee> toDomainList (List<EmployeeEntity> employeeEntities);
 }
