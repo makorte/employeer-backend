@@ -1,4 +1,7 @@
 This Project is WIP. New features will get implemented on an ongoing basis.
+### REST-API Documentation
+Swagger Documentation for all REST endpoints can be accessed under http://localhost:8081/employeer/rest/v1/swagger-ui
+
 ## Features
 ### Employees
 Employees can be created, updated, deleted and queried.
