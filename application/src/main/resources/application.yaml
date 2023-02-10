@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/employeer
+    username: user
+    password: employeerdb
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+  servlet:
+    context-path: /employeer/rest/v1
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
