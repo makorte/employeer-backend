@@ -1,5 +1,8 @@
 This Project is WIP. New features will get implemented on an ongoing basis.
-### REST-API Documentation
+## Backend and Frontend
+This is the Backend application of the project. The frontend repository is available under https://github.com/makorte/employeer-frontend.
+
+## REST-API Documentation
 Swagger Documentation for all REST endpoints can be accessed under http://localhost:8081/employeer/rest/v1/swagger-ui
 
 ## Features
